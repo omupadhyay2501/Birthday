@@ -1,3 +1,169 @@
-<!-- Generated music.html
-See previous chat for the complete HTML content.
--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Song ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#080811,#1b1024,#2d1233);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.player{
+
+    width:90%;
+    max-width:430px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 0 35px rgba(255,105,180,.25);
+
+}
+
+.cover{
+
+    width:230px;
+    height:230px;
+
+    margin:auto;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 30px rgba(255,105,180,.35);
+
+}
+
+.cover img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+h1{
+
+    margin:25px 0 8px;
+    color:#ff6fb7;
+
+}
+
+.artist{
+
+    color:#ddd;
+    margin-bottom:25px;
+
+}
+
+audio{
+
+    width:100%;
+    margin-top:15px;
+
+}
+
+.quote{
+
+    margin-top:25px;
+
+    line-height:1.8;
+
+    color:#eee;
+
+    font-style:italic;
+
+}
+
+.back{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:14px 32px;
+
+    background:#ff4fa2;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="player">
+
+<div class="cover">
+
+<img src="images/photo1.jpg" alt="Our Photo">
+
+</div>
+
+<h1>Our Song ❤️</h1>
+
+<p class="artist">
+
+Play the song that reminds us of each other.
+
+</p>
+
+<audio controls>
+
+<source src="music/birthday-song.mp3" type="audio/mpeg">
+
+Your browser does not support audio.
+
+</audio>
+
+<div class="quote">
+
+"Every time this song plays,
+I remember your smile,
+your voice,
+and every beautiful moment we've shared."
+
+</div>
+
+<a href="index.html" class="back">
+
+🏠 Back Home
+
+</a>
+
+</div>
+
+</body>
+
+</html>
