@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Surprise ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+    /* ===========================
+   GIFT GLOW
+=========================== */
+
+.gift{
+    animation:giftGlow 2s ease-in-out infinite;
+}
+
+@keyframes giftGlow{
+
+0%{
+    transform:scale(1);
+    filter:drop-shadow(0 0 10px rgba(255,80,170,.4));
+}
+
+50%{
+    transform:scale(1.03);
+    filter:drop-shadow(0 0 35px rgba(255,80,170,.9));
+}
+
+100%{
+    transform:scale(1);
+    filter:drop-shadow(0 0 10px rgba(255,80,170,.4));
+}
+
+}
+
+/* ===========================
+   GIFT OPEN ANIMATION
+=========================== */
+
+.lid.open{
+
+    transform:
+    rotateX(130deg)
+    translateY(-30px);
+
+}
+
+/* ===========================
+   BALLOONS
+=========================== */
+
+.balloon{
+
+    user-select:none;
+
+    opacity:.95;
+
+}
+
+.balloon:nth-child(1){
+
+left:8%;
+animation-duration:14s;
+
+}
+
+.balloon:nth-child(2){
+
+left:22%;
+animation-duration:18s;
+
+}
+
+.balloon:nth-child(3){
+
+left:38%;
+animation-duration:16s;
+
+}
+
+.balloon:nth-child(4){
+
+left:57%;
+animation-duration:20s;
+
+}
+
+.balloon:nth-child(5){
+
+left:74%;
+animation-duration:17s;
+
+}
+
+.balloon:nth-child(6){
+
+left:90%;
+animation-duration:15s;
+
+}
+
+/* ===========================
+   HEART PARTICLES
+=========================== */
+
+.heart{
+
+position:fixed;
+
+bottom:-50px;
+
+font-size:24px;
+
+pointer-events:none;
+
+animation:heartFloat linear forwards;
+
+z-index:9999;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:
+translateY(0)
+scale(.6);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+scale(1.6);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   SPARKLES
+=========================== */
+
+.sparkle{
+
+position:fixed;
+
+width:6px;
+
+height:6px;
+
+background:#fff;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 10px white,
+
+0 0 20px #ffd54f,
+
+0 0 30px #fff;
+
+animation:sparkleAnim 2s linear forwards;
+
+pointer-events:none;
+
+}
+
+@keyframes sparkleAnim{
+
+0%{
+
+opacity:0;
+
+transform:scale(.2);
+
+}
+
+30%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateY(-120px)
+scale(2);
+
+}
+
+}
+
+/* ===========================
+   FIREWORKS
+=========================== */
+
+.firework{
+
+position:fixed;
+
+width:10px;
+
+height:10px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+animation:explode 1.3s ease-out forwards;
+
+}
+
+@keyframes explode{
+
+0%{
+
+transform:scale(.2);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(18);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   HAPPY MESSAGE EFFECT
+=========================== */
+
+#surpriseContent h2{
+
+animation:pulseText 2s infinite;
+
+}
+
+@keyframes pulseText{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+color:#fff176;
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ===========================
+   BUTTON EFFECT
+=========================== */
+
+.back-btn{
+
+transition:.35s;
+
+box-shadow:0 0 15px rgba(255,79,162,.35);
+
+}
+
+.back-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 0 20px rgba(255,79,162,.6),
+
+0 0 40px rgba(255,79,162,.4);
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+h1{
+
+font-size:40px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+#surpriseContent h2{
+
+font-size:34px;
+
+}
+
+#surpriseContent p{
+
+font-size:18px;
+
+line-height:1.7;
+
+}
+
+.gift{
+
+transform:scale(.82);
+
+}
+
+}
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    background:linear-gradient(135deg,#080811,#150d22,#2b1031);
+    color:#fff;
+}
+
+/* Background */
+
+#stars{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-2;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2;}
+    to{opacity:1;}
+}
+
+/* Main */
+
+.container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    font-size:58px;
+    color:#ff69b4;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:22px;
+    color:#ddd;
+    margin-bottom:60px;
+}
+
+/* Gift Box */
+
+.gift-wrapper{
+    cursor:pointer;
+    perspective:1000px;
+}
+
+.gift{
+    position:relative;
+    width:220px;
+    height:220px;
+}
+
+.box{
+    position:absolute;
+    bottom:0;
+    width:220px;
+    height:160px;
+    background:#ff4fa2;
+    border-radius:12px;
+    box-shadow:0 20px 40px rgba(255,0,120,.35);
+}
+
+.lid{
+    position:absolute;
+    top:0;
+    width:220px;
+    height:60px;
+    background:#ff78be;
+    border-radius:12px;
+    transform-origin:bottom;
+    transition:1s;
+}
+
+.ribbon-v{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:22px;
+    height:220px;
+    background:#fff;
+}
+
+.ribbon-h{
+    position:absolute;
+    top:24px;
+    width:220px;
+    height:16px;
+    background:#fff;
+}
+
+.bow{
+    position:absolute;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:42px;
+}
+
+/* Hidden Content */
+
+#surpriseContent{
+    display:none;
+    margin-top:50px;
+    animation:fadeIn 1.2s ease;
+}
+
+#surpriseContent h2{
+    font-size:48px;
+    color:#ffd54f;
+    margin-bottom:20px;
+}
+
+#surpriseContent p{
+    font-size:22px;
+    max-width:850px;
+    line-height:1.8;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Balloons */
+
+.balloon{
+    position:absolute;
+    bottom:-180px;
+    font-size:70px;
+    animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(-140vh);
+}
+
+}
+
+/* Back Button */
+
+.back-btn{
+
+margin-top:40px;
+
+display:inline-block;
+
+padding:16px 35px;
+
+border-radius:40px;
+
+background:#ff4fa2;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+
+/* LOVE LETTER */
+.letter-paper{max-width:900px;margin:40px auto;padding:60px;background:linear-gradient(180deg,#fffdf5,#fff8e8);color:#4b2e2e;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.35);border:8px solid #f6e6c5;}
+.letter-title{font-family:'Allura',cursive;font-size:60px;text-align:center;color:#d63384;}
+.love-letter{font-family:'Allura',cursive;font-size:34px;line-height:2.1;color:#4a2f2f;text-align:justify;}
+.signature{text-align:right;font-family:'Allura',cursive;font-size:42px;color:#d63384;margin-top:40px;}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div class="container">
+
+<h1>🎁 One Last Surprise</h1>
+
+<p class="subtitle">
+
+Tap the gift box to open your birthday surprise ❤️
+
+</p>
+
+<div class="gift-wrapper" id="giftWrapper">
+
+<div class="gift">
+
+<div class="lid" id="lid"></div>
+
+<div class="box"></div>
+
+<div class="ribbon-v"></div>
+
+<div class="ribbon-h"></div>
+
+<div class="bow">🎀</div>
+
+</div>
+
+</div>
+
+<div id="surpriseContent">
+
+<div class="letter-paper">
+
+<h2 class="letter-title">To My Dearest Varsha ❤️</h2>
+
+<div class="love-letter">
+
+<!-- Paste your complete 600-700 word letter here -->
+
+</div>
+
+<div class="signature">
+Forever Yours,<br>Om ❤️
+</div>
+
+</div>
+
+<a href="index.html" class="back-btn">
+
+🏠 Back Home
+
+</a>
+
+</div>
+
+</div>
+
+<!-- JavaScript will be added in Part 3 -->
+    <script>
+
+// ==========================
+// Create Twinkling Stars
+// ==========================
+
+const stars = document.getElementById("stars");
+
+for(let i=0;i<180;i++){
+
+    const star=document.createElement("div");
+
+    star.className="star";
+
+    star.style.left=Math.random()*100+"vw";
+
+    star.style.top=Math.random()*100+"vh";
+
+    star.style.animationDelay=Math.random()*2+"s";
+
+    star.style.opacity=Math.random();
+
+    stars.appendChild(star);
+}
+
+// ==========================
+// Create Floating Balloons
+// ==========================
+
+const colors=["🎈","🎈","🎈","🎈","🎈","🎈"];
+
+for(let i=0;i<18;i++){
+
+    const b=document.createElement("div");
+
+    b.className="balloon";
+
+    b.innerHTML=colors[Math.floor(Math.random()*colors.length)];
+
+    b.style.left=Math.random()*100+"vw";
+
+    b.style.animationDuration=(10+Math.random()*10)+"s";
+
+    b.style.fontSize=(45+Math.random()*35)+"px";
+
+    b.style.animationDelay=Math.random()*6+"s";
+
+    document.body.appendChild(b);
+
+}
+
+// ==========================
+// Gift Opening
+// ==========================
+
+let opened=false;
+
+document.getElementById("giftWrapper").onclick=function(){
+
+    if(opened) return;
+
+    opened=true;
+
+    document.getElementById("lid").classList.add("open");
+
+    setTimeout(()=>{
+
+        document.getElementById("surpriseContent").style.display="block";
+
+    },900);
+
+    launchFireworks();
+
+    createConfetti();
+
+};
+
+// ==========================
+// Floating Hearts
+// ==========================
+
+function createHeart(){
+
+    const h=document.createElement("div");
+
+    h.className="heart";
+
+    h.innerHTML="❤️";
+
+    h.style.left=Math.random()*100+"vw";
+
+    h.style.fontSize=(18+Math.random()*28)+"px";
+
+    h.style.animationDuration=(4+Math.random()*4)+"s";
+
+    document.body.appendChild(h);
+
+    setTimeout(()=>h.remove(),8000);
+
+}
+
+setInterval(createHeart,400);
+
+// ==========================
+// Sparkles
+// ==========================
+
+function sparkle(){
+
+    const s=document.createElement("div");
+
+    s.className="sparkle";
+
+    s.style.left=Math.random()*100+"vw";
+
+    s.style.top=Math.random()*100+"vh";
+
+    document.body.appendChild(s);
+
+    setTimeout(()=>s.remove(),2000);
+
+}
+
+setInterval(sparkle,250);
+
+// ==========================
+// Fireworks
+// ==========================
+
+function launchFireworks(){
+
+    const colors=[
+        "#ff4fa2",
+        "#ffd54f",
+        "#00e5ff",
+        "#7cff6b",
+        "#ffffff",
+        "#ff9800"
+    ];
+
+    for(let i=0;i<120;i++){
+
+        const f=document.createElement("div");
+
+        f.className="firework";
+
+        f.style.left=(30+Math.random()*40)+"vw";
+
+        f.style.top=(20+Math.random()*30)+"vh";
+
+        f.style.background=
+        colors[Math.floor(Math.random()*colors.length)];
+
+        document.body.appendChild(f);
+
+        setTimeout(()=>f.remove(),1500);
+
+    }
+
+}
+
+// ==========================
+// Confetti
+// ==========================
+
+function createConfetti(){
+
+    const confettiColors=[
+        "#ff4fa2",
+        "#ffd54f",
+        "#00e5ff",
+        "#ffffff",
+        "#7cff6b",
+        "#ff9800"
+    ];
+
+    for(let i=0;i<250;i++){
+
+        const c=document.createElement("div");
+
+        c.style.position="fixed";
+
+        c.style.left=Math.random()*100+"vw";
+
+        c.style.top="-20px";
+
+        c.style.width="8px";
+
+        c.style.height="14px";
+
+        c.style.background=
+        confettiColors[Math.floor(Math.random()*confettiColors.length)];
+
+        c.style.transform=
+        "rotate("+Math.random()*360+"deg)";
+
+        c.style.transition=
+        (3+Math.random()*3)+"s linear";
+
+        c.style.zIndex="9999";
+
+        document.body.appendChild(c);
+
+        setTimeout(()=>{
+
+            c.style.transform=
+            "translateY(120vh) rotate(720deg)";
+
+        },50);
+
+        setTimeout(()=>c.remove(),7000);
+
+    }
+
+}
+
+            </script>
+    <!-- Birthday Music -->
+<audio id="birthdayMusic" loop>
+    <source src="music/birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+// Play music automatically after opening the gift
+const music = document.getElementById("birthdayMusic");
+
+document.getElementById("giftWrapper").addEventListener("click", () => {
+
+    music.play().catch(() => {
+        console.log("Autoplay blocked until user interaction.");
+    });
+
+});
+
+// Cake Animation
+const cake = document.createElement("div");
+
+cake.innerHTML = "🎂";
+
+cake.style.position = "fixed";
+cake.style.bottom = "25px";
+cake.style.right = "25px";
+cake.style.fontSize = "70px";
+cake.style.zIndex = "9998";
+cake.style.animation = "cakeBounce 2s infinite";
+
+document.body.appendChild(cake);
+
+// Add animation dynamically
+const style = document.createElement("style");
+
+style.innerHTML = `
+
+@keyframes cakeBounce{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+
+}
+
+`;
+
+document.head.appendChild(style);
+
+// Final Message after 5 seconds
+setTimeout(()=>{
+
+if(opened){
+
+alert("❤️ Happy Birthday Varsha ❤️\n\nMay every dream of yours come true.\n\nLove You Forever!\n\n- Om ❤️");
+
+}
+
+},5000);
+
+</script>
+
+</body>
+
+</html>
