@@ -544,3 +544,52 @@ left:10px!important;
 }
 
 }
+.countdown{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.time{
+    width:120px;
+    padding:20px;
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(255,79,162,0.3);
+}
+
+.time h2{
+    font-size:40px;
+    color:#ff4fa2;
+}
+
+.time p{
+    margin-top:8px;
+    font-size:16px;
+    color:#ffffff;
+}
+
+@media(max-width:768px){
+
+.countdown{
+    gap:10px;
+}
+
+.time{
+    width:80px;
+    padding:12px;
+}
+
+.time h2{
+    font-size:28px;
+}
+
+.time p{
+    font-size:13px;
+}
+
+}
