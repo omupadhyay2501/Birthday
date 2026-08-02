@@ -801,3 +801,18 @@ createConfetti();
 }
 
 }
+.love-letter{
+
+    font-family:'Allura',cursive;
+
+    font-size:36px;
+
+    line-height:2.2;
+
+    color:#ffffff;
+
+    text-align:left;
+
+    text-shadow:0 0 8px rgba(255,255,255,.15);
+
+}
