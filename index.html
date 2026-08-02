@@ -26,6 +26,9 @@ rel="stylesheet">
 </head>
 
 <body>
+     <audio id="bgMusic" loop>
+    <source src="music/birthday-song.mp3" type="audio/mpeg">
+     </audio>
 
 <!-- Progress Bar -->
 
@@ -887,6 +890,20 @@ Happy Birthday Varsha ❤️
 ========================== -->
 
 <script src="script.js"></script>
+<script>
+const music = document.getElementById("bgMusic");
+const button = document.getElementById("musicBtn");
+
+button.onclick = function () {
+    if (music.paused) {
+        music.play();
+        button.innerHTML = "⏸ Pause Music";
+    } else {
+        music.pause();
+        button.innerHTML = "▶ Play Music";
+    }
+};
+</script>
 
 </body>
 
