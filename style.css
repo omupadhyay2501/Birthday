@@ -816,3 +816,101 @@ createConfetti();
     text-shadow:0 0 8px rgba(255,255,255,.15);
 
 }
+/* ===========================
+   LOVE LETTER PAGE
+=========================== */
+
+.letter-paper{
+
+max-width:900px;
+
+margin:40px auto;
+
+padding:60px;
+
+background:linear-gradient(
+180deg,
+#fffdf5,
+#fff8e8
+);
+
+color:#4b2e2e;
+
+border-radius:20px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.35);
+
+border:8px solid #f6e6c5;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.letter-paper::before{
+
+content:"❤️";
+
+position:absolute;
+
+top:20px;
+
+right:30px;
+
+font-size:45px;
+
+opacity:.15;
+
+}
+
+.letter-title{
+
+font-family:'Allura',cursive;
+
+font-size:60px;
+
+text-align:center;
+
+color:#d63384;
+
+margin-bottom:30px;
+
+}
+
+.love-letter{
+
+font-family:'Allura',cursive;
+
+font-size:34px;
+
+line-height:2.1;
+
+letter-spacing:.5px;
+
+text-align:justify;
+
+color:#4a2f2f;
+
+}
+
+.signature{
+
+margin-top:50px;
+
+text-align:right;
+
+font-family:'Allura',cursive;
+
+font-size:44px;
+
+color:#d63384;
+
+}
+
+.letter-paper p{
+
+margin-bottom:20px;
+
+}
