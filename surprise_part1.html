@@ -1,1 +1,274 @@
-<!-- surprise.html Part 1 placeholder -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Surprise ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    background:linear-gradient(135deg,#080811,#150d22,#2b1031);
+    color:#fff;
+}
+
+/* Background */
+
+#stars{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-2;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2;}
+    to{opacity:1;}
+}
+
+/* Main */
+
+.container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    font-size:58px;
+    color:#ff69b4;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:22px;
+    color:#ddd;
+    margin-bottom:60px;
+}
+
+/* Gift Box */
+
+.gift-wrapper{
+    cursor:pointer;
+    perspective:1000px;
+}
+
+.gift{
+    position:relative;
+    width:220px;
+    height:220px;
+}
+
+.box{
+    position:absolute;
+    bottom:0;
+    width:220px;
+    height:160px;
+    background:#ff4fa2;
+    border-radius:12px;
+    box-shadow:0 20px 40px rgba(255,0,120,.35);
+}
+
+.lid{
+    position:absolute;
+    top:0;
+    width:220px;
+    height:60px;
+    background:#ff78be;
+    border-radius:12px;
+    transform-origin:bottom;
+    transition:1s;
+}
+
+.ribbon-v{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:22px;
+    height:220px;
+    background:#fff;
+}
+
+.ribbon-h{
+    position:absolute;
+    top:24px;
+    width:220px;
+    height:16px;
+    background:#fff;
+}
+
+.bow{
+    position:absolute;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:42px;
+}
+
+/* Hidden Content */
+
+#surpriseContent{
+    display:none;
+    margin-top:50px;
+    animation:fadeIn 1.2s ease;
+}
+
+#surpriseContent h2{
+    font-size:48px;
+    color:#ffd54f;
+    margin-bottom:20px;
+}
+
+#surpriseContent p{
+    font-size:22px;
+    max-width:850px;
+    line-height:1.8;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Balloons */
+
+.balloon{
+    position:absolute;
+    bottom:-180px;
+    font-size:70px;
+    animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(-140vh);
+}
+
+}
+
+/* Back Button */
+
+.back-btn{
+
+margin-top:40px;
+
+display:inline-block;
+
+padding:16px 35px;
+
+border-radius:40px;
+
+background:#ff4fa2;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div class="container">
+
+<h1>🎁 One Last Surprise</h1>
+
+<p class="subtitle">
+
+Tap the gift box to open your birthday surprise ❤️
+
+</p>
+
+<div class="gift-wrapper" id="giftWrapper">
+
+<div class="gift">
+
+<div class="lid" id="lid"></div>
+
+<div class="box"></div>
+
+<div class="ribbon-v"></div>
+
+<div class="ribbon-h"></div>
+
+<div class="bow">🎀</div>
+
+</div>
+
+</div>
+
+<div id="surpriseContent">
+
+<h2>
+
+Happy Birthday My Darling ❤️
+
+</h2>
+
+<p>
+
+Every moment with you has become a priceless memory.
+You are my happiness, my peace, my biggest blessing and
+my favourite person in this entire world.
+
+Thank you for making my life beautiful.
+
+I Love You Forever ❤️
+
+</p>
+
+<a href="index.html" class="back-btn">
+
+🏠 Back Home
+
+</a>
+
+</div>
+
+</div>
+
+<!-- JavaScript will be added in Part 3 -->
+
+</body>
+
+</html>
