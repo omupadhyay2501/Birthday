@@ -593,3 +593,82 @@ left:10px!important;
 }
 
 }
+/*==============================*/
+/* LOVE REASONS CARD */
+/*==============================*/
+
+.reasonCard{
+
+margin:35px auto;
+
+max-width:800px;
+
+padding:35px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+box-shadow:0 0 35px rgba(255,80,170,.35);
+
+animation:fadeReason .8s;
+
+}
+
+.loveHeading{
+
+font-size:42px;
+
+color:#ff5ea8;
+
+margin-bottom:30px;
+
+}
+
+.reasonCard h3{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+color:#ffd54f;
+
+}
+
+.reasonCard p{
+
+font-size:21px;
+
+line-height:1.9;
+
+color:#ffffff;
+
+}
+
+#nextReasonBtn{
+
+margin-top:30px;
+
+}
+
+@keyframes fadeReason{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
