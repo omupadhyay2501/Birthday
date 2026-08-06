@@ -282,3 +282,68 @@ window.onscroll = function () {
         progress.style.width = scrolled + "%";
     }
 };
+const reasons=[
+
+{
+
+title:"❤️ Reason 1 - Tumhari Smile😊",
+
+text:"Tmhari smile...aise toh tmhe lagta h bahut dangerous h🤣..but wo bebaak hasi😍..hme bahut psnd hai♥️...like jaan se jyda pyari h🥰...charming hai🤩..lively h...aur mere liye toh had se khoobsurat😌"
+
+},
+
+{
+
+title:"❤️ Reason 2 - Tumhara Caring Nature🫶🏻",
+
+text:"Tum jis trh meri care krti ho😊 aur bina bole meri feelings samajh leti ho🫢.. wo mujhe har din special feel krata hai😎...Tumhare saath hone se hr problem chhoti lagti hai🤏🏻."
+
+},
+
+{
+
+title:"❤️ Reason 3 - Tum Mujhe Samajhti Ho🫰🏻",
+
+text:"Kabhi kabhi bina kuch kahe tum meri feelings samajh leti ho👉🏻👈🏻...Shayad isi ko real connection kehte hain🤔..ye baat mujhe hr din tumhare aur kareeb le aati hai🤗."
+
+},
+
+{
+
+title:"❤️ Reason 4 - Tumhari Respect🫡",
+
+text:"Tum hmesha hr insaan ki respect karti ho😌....Tumhara nature aur simplicity hi tmhe sabse alg aur sabse beautiful banati hai☝🏻✨."
+
+},
+
+{
+
+title:"❤️ Reason 5 - Hmari Journey🛣️",
+
+text:"13 December 2020 se lekr aaj tk ka hr moment meri life ki sbse beautiful memory hai💭. Main chahta hu ye journey kabhi khatam na ho♾️."
+
+},
+
+{
+
+title:"❤️ Reason 6 - Tum Mujhe Better Banati Ho🤵🏻‍♂️",
+
+text:"Tumse milne ke baad mujhe khud ka better version banne ka mann karta hai😎....Tum meri strength bhi ho💪🏻 aur meri motivation bhi🫡."
+
+},
+
+{
+
+title:"❤️ Reason 7 - Tum Meri Khushi Ho🥰",
+
+text:"Meri khushi kisi cheez mein nahi😊...balki tumhare saath bitaye hue chhote chhote moments mein hai⌛....wahi moments meri life ka sbse bada gift hain🎁."
+
+},
+
+{
+
+title:"❤️ Reason 8 - Sirf Tum💝",
+
+text:"Sach kahu😌... in sb reasons se bhi bda ek☝🏻 reason hai...mai tumse kisi wajah se nahi🙅🏻‍♂️..blki tumhari hr chhoti si baat ke liye pyaar karta hu🤗...Thank you meri life ka sbse beautiful part banne ke liye🙇🏻‍♂️. Happy Birthday My Darling ❤️"
+
+}
