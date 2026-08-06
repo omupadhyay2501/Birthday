@@ -552,344 +552,125 @@ font-weight:600;
 </head>
 
 <body>
+<body>
 
+<!-- Animated Background -->
 <div id="stars"></div>
+<div id="heartsContainer"></div>
 
-<div class="container">
-
-<h1>🎁 One Last Surprise</h1>
-
-<p class="subtitle">
-
-Tap the gift box to open your birthday surprise ❤️
-
-</p>
-
-<div class="gift-wrapper" id="giftWrapper">
-
-<div class="gift">
-
-<div class="lid" id="lid"></div>
-
-<div class="box"></div>
-
-<div class="ribbon-v"></div>
-
-<div class="ribbon-h"></div>
-
-<div class="bow">🎀</div>
-
-</div>
-
-</div>
-
-<div id="surpriseContent">
-
-<div class="letter-paper">
-
-<h2 class="letter-title">To My Dearest Varsha ❤️</h2>
-
-<div class="love-letter">
-
-<!-- Paste your complete 600-700 word letter here -->
-
-</div>
-
-<div class="signature">
-Forever Yours,<br>Om ❤️
-</div>
-
-</div>
-
-<a href="index.html" class="back-btn">
-
-🏠 Back Home
-
-</a>
-
-</div>
-
-</div>
-
-<!-- JavaScript will be added in Part 3 -->
-    <script>
-
-// ==========================
-// Create Twinkling Stars
-// ==========================
-
-const stars = document.getElementById("stars");
-
-for(let i=0;i<180;i++){
-
-    const star=document.createElement("div");
-
-    star.className="star";
-
-    star.style.left=Math.random()*100+"vw";
-
-    star.style.top=Math.random()*100+"vh";
-
-    star.style.animationDelay=Math.random()*2+"s";
-
-    star.style.opacity=Math.random();
-
-    stars.appendChild(star);
-}
-
-// ==========================
-// Create Floating Balloons
-// ==========================
-
-const colors=["🎈","🎈","🎈","🎈","🎈","🎈"];
-
-for(let i=0;i<18;i++){
-
-    const b=document.createElement("div");
-
-    b.className="balloon";
-
-    b.innerHTML=colors[Math.floor(Math.random()*colors.length)];
-
-    b.style.left=Math.random()*100+"vw";
-
-    b.style.animationDuration=(10+Math.random()*10)+"s";
-
-    b.style.fontSize=(45+Math.random()*35)+"px";
-
-    b.style.animationDelay=Math.random()*6+"s";
-
-    document.body.appendChild(b);
-
-}
-
-// ==========================
-// Gift Opening
-// ==========================
-
-let opened=false;
-
-document.getElementById("giftWrapper").onclick=function(){
-
-    if(opened) return;
-
-    opened=true;
-
-    document.getElementById("lid").classList.add("open");
-
-    setTimeout(()=>{
-
-        document.getElementById("surpriseContent").style.display="block";
-
-    },900);
-
-    launchFireworks();
-
-    createConfetti();
-
-};
-
-// ==========================
-// Floating Hearts
-// ==========================
-
-function createHeart(){
-
-    const h=document.createElement("div");
-
-    h.className="heart";
-
-    h.innerHTML="❤️";
-
-    h.style.left=Math.random()*100+"vw";
-
-    h.style.fontSize=(18+Math.random()*28)+"px";
-
-    h.style.animationDuration=(4+Math.random()*4)+"s";
-
-    document.body.appendChild(h);
-
-    setTimeout(()=>h.remove(),8000);
-
-}
-
-setInterval(createHeart,400);
-
-// ==========================
-// Sparkles
-// ==========================
-
-function sparkle(){
-
-    const s=document.createElement("div");
-
-    s.className="sparkle";
-
-    s.style.left=Math.random()*100+"vw";
-
-    s.style.top=Math.random()*100+"vh";
-
-    document.body.appendChild(s);
-
-    setTimeout(()=>s.remove(),2000);
-
-}
-
-setInterval(sparkle,250);
-
-// ==========================
-// Fireworks
-// ==========================
-
-function launchFireworks(){
-
-    const colors=[
-        "#ff4fa2",
-        "#ffd54f",
-        "#00e5ff",
-        "#7cff6b",
-        "#ffffff",
-        "#ff9800"
-    ];
-
-    for(let i=0;i<120;i++){
-
-        const f=document.createElement("div");
-
-        f.className="firework";
-
-        f.style.left=(30+Math.random()*40)+"vw";
-
-        f.style.top=(20+Math.random()*30)+"vh";
-
-        f.style.background=
-        colors[Math.floor(Math.random()*colors.length)];
-
-        document.body.appendChild(f);
-
-        setTimeout(()=>f.remove(),1500);
-
-    }
-
-}
-
-// ==========================
-// Confetti
-// ==========================
-
-function createConfetti(){
-
-    const confettiColors=[
-        "#ff4fa2",
-        "#ffd54f",
-        "#00e5ff",
-        "#ffffff",
-        "#7cff6b",
-        "#ff9800"
-    ];
-
-    for(let i=0;i<250;i++){
-
-        const c=document.createElement("div");
-
-        c.style.position="fixed";
-
-        c.style.left=Math.random()*100+"vw";
-
-        c.style.top="-20px";
-
-        c.style.width="8px";
-
-        c.style.height="14px";
-
-        c.style.background=
-        confettiColors[Math.floor(Math.random()*confettiColors.length)];
-
-        c.style.transform=
-        "rotate("+Math.random()*360+"deg)";
-
-        c.style.transition=
-        (3+Math.random()*3)+"s linear";
-
-        c.style.zIndex="9999";
-
-        document.body.appendChild(c);
-
-        setTimeout(()=>{
-
-            c.style.transform=
-            "translateY(120vh) rotate(720deg)";
-
-        },50);
-
-        setTimeout(()=>c.remove(),7000);
-
-    }
-
-}
-
-            </script>
-    <!-- Birthday Music -->
+<!-- Music -->
 <audio id="birthdayMusic" loop>
     <source src="music/birthday-song.mp3" type="audio/mpeg">
 </audio>
 
-<script>
+<!-- Main Container -->
+<div class="container">
 
-// Play music automatically after opening the gift
-const music = document.getElementById("birthdayMusic");
+    <h1 class="mainTitle">
+        🎁 One Last Surprise
+    </h1>
 
-document.getElementById("giftWrapper").addEventListener("click", () => {
+    <p class="subtitle">
+        Tap the Gift Box to unlock something made only for you ❤️
+    </p>
 
-    music.play().catch(() => {
-        console.log("Autoplay blocked until user interaction.");
-    });
+    <!-- Gift -->
+    <div class="gift-wrapper" id="giftWrapper">
 
-});
+        <div class="gift">
 
-// Cake Animation
-const cake = document.createElement("div");
+            <div class="lid" id="lid"></div>
 
-cake.innerHTML = "🎂";
+            <div class="box"></div>
 
-cake.style.position = "fixed";
-cake.style.bottom = "25px";
-cake.style.right = "25px";
-cake.style.fontSize = "70px";
-cake.style.zIndex = "9998";
-cake.style.animation = "cakeBounce 2s infinite";
+            <div class="ribbon-v"></div>
 
-document.body.appendChild(cake);
+            <div class="ribbon-h"></div>
 
-// Add animation dynamically
-const style = document.createElement("style");
+            <div class="bow">
+                🎀
+            </div>
 
-style.innerHTML = `
+        </div>
 
-@keyframes cakeBounce{
+    </div>
 
-0%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0);}
+    <!-- Hidden Content -->
+    <div id="surpriseContent">
 
-}
+        <!-- 8 Reasons Page -->
+        <section id="reasonsSection">
 
-`;
+            <h2 class="sectionTitle">
 
-document.head.appendChild(style);
+                ❤️ 8 Reasons Why I'll Always Love You ❤️
 
-// Final Message after 5 seconds
-setTimeout(()=>{
+            </h2>
 
-if(opened){
+            <div class="reasonCard">
 
-alert("❤️ Happy Birthday Varsha ❤️\n\nMay every dream of yours come true.\n\nLove You Forever!\n\n- Om ❤️");
+                <img
+                    id="reasonImage"
+                    src="images/Photo1.jpg"
+                    alt="Reason Photo"
+                >
 
-}
+                <h3 id="reasonTitle">
 
-},5000);
+                    ❤️ Reason 1
 
-</script>
+                </h3>
+
+                <p id="reasonText">
+
+                </p>
+
+                <button
+                    id="nextReasonBtn"
+                    class="btn">
+
+                    Next Reason ❤️
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Letter (Hidden Initially) -->
+
+        <section
+            id="letterSection"
+            style="display:none;">
+
+            <!-- We'll build this in Part 3 -->
+
+        </section>
+
+        <!-- Final Section -->
+
+        <section
+            id="finalSection"
+            style="display:none;">
+
+            <!-- We'll build this in Part 4 -->
+
+        </section>
+
+        <a href="index.html" class="back-btn">
+
+            🏠 Back Home
+
+        </a>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
 
 </body>
 
