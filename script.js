@@ -392,6 +392,12 @@ document.getElementById("reasonsSection").style.display="none";
 
 document.getElementById("letterSection").style.display="block";
 
+typingBox.innerHTML="";
+
+index=0;
+
+typeLetter();
+
 launchFireworks();
 
 createConfetti();
