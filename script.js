@@ -399,3 +399,55 @@ createConfetti();
 }
 
 };
+/*========================================
+TYPEWRITER LOVE LETTER
+========================================*/
+
+const fullLetter = `
+
+My Dearest Varsha ❤️
+
+(Paste your complete 600-700 word love letter here.)
+
+`;
+
+const typingBox = document.getElementById("typingLetter");
+const continueBtn = document.getElementById("continueBtn");
+
+let index = 0;
+
+function typeLetter(){
+
+    if(index < fullLetter.length){
+
+        typingBox.innerHTML += fullLetter.charAt(index);
+
+        index++;
+
+        setTimeout(typeLetter,25);
+
+    }
+
+    else{
+
+        continueBtn.style.display="inline-block";
+
+        launchFireworks();
+
+        createConfetti();
+
+    }
+
+}
+
+continueBtn.onclick=function(){
+
+    document.getElementById("letterSection").style.display="none";
+
+    document.getElementById("finalSection").style.display="block";
+
+    launchFireworks();
+
+    createConfetti();
+
+};
